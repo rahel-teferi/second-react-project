@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.searchContainer {
+    margin: 100px 0 0 100px;
+    width: calc(100%-200px);
+    height: 80vh;
+    overflow-x: hidden;
+}
+
+.searchSection {
+    height: 10vh;
+    margin: 10px 0 0 50px;
+    ;
+
+}
+
+.result {
+    margin: 10px 0 0 50px;
+    max-height: 60vh;
+    overflow-y: scroll;
+
+}
