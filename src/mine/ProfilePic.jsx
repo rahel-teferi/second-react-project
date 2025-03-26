@@ -1,4 +1,4 @@
-import "./profile.css";
+import "./Profile.css";
 import pic from "/RT.jpg";
 
 export const ProfilePic = () => {
