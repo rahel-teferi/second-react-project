@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import { ShoppingList } from "./exercises/shopping list/ShoppingList.jsx";
 import { Header } from "./mine/header/Header.jsx";
 import { SearchUser } from "./exercises/searchAUser/SearchUser.jsx";
+import pic from "/sunset.jpg";
 
 function App() {
   let cardsInfo = [
@@ -18,7 +19,7 @@ function App() {
     },
     {
       title: "Second Title",
-      content: "Second content",
+      content: <img src="sunset.jpg" />,
     },
     {
       title: "Third Title",
@@ -55,23 +56,25 @@ function App() {
   const userURL = "https://api.github.com";
 
   const getUser = async () => {
-    try {
-      let response = await fetch(`${userURL}/search/users?q=${query}`);
-      if (!response.ok) {
-        throw new Error(`error is${error}`);
+    if (query === "") {
+      setResult("");
+    } else {
+      try {
+        let response = await fetch(`${userURL}/search/users?q=${query}`);
+        if (!response.ok) {
+          throw new Error(`error is${error}`);
+        }
+        let userData = await response.json();
+        let users = userData.items;
+        setResult(users);
+      } catch (error) {
+        console.log(error);
       }
-      let userData = await response.json();
-      let users = userData.items;
-      setResult((result) => (result = users));
-    } catch (error) {
-      console.log(error);
     }
   };
-
-  const WeatherURL = "";
-const cities=["Berlin","Addis Abeba", "Los Angels", "Beijing"];
-
-
+  useEffect(() => {
+    getUser();
+  }, []);
 
   return (
     <>

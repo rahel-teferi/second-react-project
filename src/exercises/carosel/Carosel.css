@@ -2,10 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80vh;
+    height: 90vh;
     max-width: 800px;
     margin: auto;
     overflow: hidden;
+
+
+}
+
+.container div {
+    /* width: 500px; */
+    object-position: center;
+    object-fit: contain;
+}
+
+.container div img {
+    max-width: 500px;
 }
 
 .caroselBtn {

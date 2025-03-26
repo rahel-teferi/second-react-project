@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 export const Carosel = ({ data }) => {
   const [index, setIndex] = useState(0);
 
-  function getPrevious() {
+  function getPrev() {
     setIndex((index) => {
       if (index === 0) return data.length - 1;
       return index - 1;
@@ -29,10 +29,10 @@ export const Carosel = ({ data }) => {
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
 
-        <p>
+        <div>
           {data[index].title}
           <br /> {data[index].content}
-        </p>
+        </div>
 
         <button onClick={() => getNext(index)}>
           <FontAwesomeIcon icon={faArrowRight} />

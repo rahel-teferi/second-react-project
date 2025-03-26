@@ -16,22 +16,29 @@ export const SearchUser = ({ data, value, onChange, onClick }) => {
         </form>
       </section>
       <section className="result">
-        <p>Result</p>
-        <ul>
-          {data.map((user, index) => (
-            <li key={index}>
-              <p>{user.login}</p>
-              <img src={user.avatar_url} />
-            </li>
-          ))}
-        </ul>
+        {data.length > 0 ? (
+          <>
+            <p>Result</p>
+
+            <ul>
+              {data.map((user, index) => (
+                <li key={index}>
+                  <p>{user.login}</p>
+                  <img src={user.avatar_url} />
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : (
+          <p style={{ paddingBottom: "100px" }}>No result to show</p>
+        )}
       </section>
-      <section style={{ position: "absolute", bottom: "55px" }}>
+      <section>
         <p>
           Go back to <Link to="/">Home</Link>
         </p>
         Go back to
-        <a href="#" onClick={() => navigate(-1)}>
+        <a href="#" onClick={(e) => navigate(-1)}>
           Previous page
         </a>
       </section>

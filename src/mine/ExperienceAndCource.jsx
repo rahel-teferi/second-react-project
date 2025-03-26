@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export const School = () => {
+export const ExperienceAndCource = () => {
   return (
     <div className="school">
       <h3>Work Experience</h3>
@@ -26,6 +26,17 @@ export const School = () => {
 
       <h4 style={{ textDecoration: "underline" }}>Hamburg Coding School</h4>
       <p>Full-stack web development</p>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Javascript</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>React</li>
+        <li>Git</li>
+        <li>MySQL</li>
+        <li>Bootstrap</li>
+      </ul>
       <h3>React projects</h3>
       <NavLink to="digitalClock">
         <h5>Digital Clock</h5>

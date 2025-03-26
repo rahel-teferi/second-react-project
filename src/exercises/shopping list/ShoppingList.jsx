@@ -73,7 +73,7 @@ export const ShoppingList = () => {
           width: "500px",
           backgroundColor: "lightgrey",
           margin: "100px auto",
-          height: "60vh",
+          height: "75vh",
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
@@ -101,7 +101,7 @@ export const ShoppingList = () => {
           sl={styleForList}
         />
       </section>
-      <section style={{ position: "absolute", bottom: "150px" }}>
+      <section>
         <p>
           Go back to <Link to="/">Home</Link>
         </p>

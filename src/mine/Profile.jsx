@@ -1,5 +1,5 @@
 import { ProfilePic } from "./ProfilePic";
-import { School } from "./School";
+import { ExperienceAndCource } from "./ExperienceAndCource";
 import "./profile.css";
 import { Hero } from "./Hero";
 
@@ -12,7 +12,7 @@ export const Profile = () => {
       {/* </div> */}
       <div className="profile">
         <ProfilePic />
-        <School />
+        <ExperienceAndCource />
       </div>
     </section>
   );

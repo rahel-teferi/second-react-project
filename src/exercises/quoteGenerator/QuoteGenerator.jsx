@@ -3,33 +3,34 @@ import { Link, useNavigate } from "react-router-dom";
 export const QuoteGenerator = ({ data, fetchNewQuote }) => {
   const navigate = useNavigate();
   return (
-    <>
+    <div style={{ width: "100%", height: "93vh" }}>
+      <h1 style={{ padding: "50px", textAlign: "center" }}>
+        Random quote Generator
+      </h1>
       <div
         style={{
           width: "500px",
-          height: "55vh",
-
+          height: "400px",
+          display: "flex",
+          flexDirection: "column",
           backgroundColor: "lightgrey",
-          margin: "100px auto",
+          margin: "auto",
           textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "50px",
         }}
       >
-        <h1 style={{ padding: "50px" }}>Random quote Generator</h1>
         <button type="button" onClick={fetchNewQuote}>
-          load more
+          Load more
         </button>
         <p>{data.quote ? data.quote : ""}</p>
       </div>
-      <section style={{ marginBottom: "50px" }}>
+      <section style={{ margin: "100px 20px" }}>
         <p>
           Go back to <Link to="/">Home</Link>
         </p>
-        {/* <p>
-          Go to{" "}
-          <a href="#" onClick={() => navigate("/")}>
-            home
-          </a>
-        </p> */}
+
         <p>
           Go back to{" "}
           <a href="#" onClick={() => navigate(-1)}>
@@ -37,6 +38,6 @@ export const QuoteGenerator = ({ data, fetchNewQuote }) => {
           </a>
         </p>
       </section>
-    </>
+    </div>
   );
 };

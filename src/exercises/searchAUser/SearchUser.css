@@ -7,7 +7,7 @@
 .searchContainer {
     margin: 100px 0 0 100px;
     width: calc(100%-200px);
-    height: 80vh;
+    height: 85vh;
     overflow-x: hidden;
 }
 
@@ -20,7 +20,7 @@
 
 .result {
     margin: 10px 0 0 50px;
-    max-height: 60vh;
+    max-height: 70vh;
     overflow-y: scroll;
 
 }
