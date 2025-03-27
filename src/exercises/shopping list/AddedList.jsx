@@ -17,12 +17,11 @@ export const AddedList = ({ data, onDeleteItem, onMoveUp, onMoveDown, sl }) => {
                 <td key={index}>{item}</td>
                 <td>
                   <button
-                    style={{}}
                     type="button"
                     onClick={() => {
                       onDeleteItem(index);
                     }}
-                    // style={{ marginLeft: "20px" }}
+                    style={{ marginLeft: "20px" }}
                   >
                     X
                   </button>

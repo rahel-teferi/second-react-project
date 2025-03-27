@@ -18,9 +18,9 @@ export const SearchUser = ({ data, value, onChange, onClick }) => {
       <section className="result">
         {data.length > 0 ? (
           <>
-            <p>Result</p>
-
             <ul>
+              <li>Result</li>
+
               {data.map((user, index) => (
                 <li key={index}>
                   <p>{user.login}</p>

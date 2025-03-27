@@ -62,7 +62,7 @@ export const ShoppingList = () => {
     width: "100%",
     padding: "20px 40px",
     textAlign: "left",
-    maxHeight: "350px",
+    maxHeight: "100px",
     overflowY: "scroll",
   };
   const navigate = useNavigate();
@@ -70,13 +70,13 @@ export const ShoppingList = () => {
     <>
       <section
         style={{
-          width: "500px",
+          maxWidth: "500px",
           backgroundColor: "lightgrey",
-          margin: "100px auto",
-          height: "75vh",
+          margin: "50px auto",
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
+          padding: "0 30px",
         }}
       >
         <h1 style={{ margin: "20px" }}>Shopping list</h1>

@@ -17,7 +17,8 @@
 }
 
 .container div img {
-    max-width: 500px;
+    max-width: 300px;
+    min-height: 300px;
 }
 
 .caroselBtn {

@@ -12,7 +12,7 @@ export const Footer = () => {
         display: "flex",
         flexDirection: "column",
         margin: "auto",
-        width: "100vw",
+        // width: "100vw",
         textAlign: "center",
         backgroundColor: "black",
         color: "white",

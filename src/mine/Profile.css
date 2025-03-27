@@ -15,15 +15,16 @@
     gap: 50px;
     max-width: 1000px;
     width: 100%;
-    height: 80%;
+
     background-color: rgb(250, 250, 250);
 
 }
 
 .profile-pic {
-    max-width: 400px;
+    /* max-width: 400px; */
     flex-grow: 1;
-
+    background-color: rgb(188, 181, 181);
+    padding: 100px 30px;
 }
 
 .contact>h4,
@@ -35,8 +36,6 @@
 .profile {
     display: flex;
     flex-wrap: wrap;
-    padding: 100px 30px;
-    height: 90vh;
 }
 
 .profile-pic img {
@@ -63,4 +62,18 @@ table {
 table tfoot {
     padding-top: 50px;
     color: "red";
+}
+
+.school {
+    padding: 100px 30px;
+}
+
+@media screen and (max-width: 966px) {
+    .profile-pic {
+        width: 100%;
+        background-color: rgb(188, 181, 181);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

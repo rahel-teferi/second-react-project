@@ -9,8 +9,8 @@ export const QuoteGenerator = ({ data, fetchNewQuote }) => {
       </h1>
       <div
         style={{
-          width: "500px",
-          height: "400px",
+          maxWidth: "500px",
+          height: "200px",
           display: "flex",
           flexDirection: "column",
           backgroundColor: "lightgrey",
