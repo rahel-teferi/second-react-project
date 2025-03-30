@@ -9,7 +9,7 @@ export const ExperienceAndCource = () => {
 
       <h4 style={{ textDecoration: "underline" }}>NIRx Medizintechnik GmbH</h4>
 
-      <p>Logistics Team lead</p>
+      <p style={{ paddingBottom: "10px" }}>Logistics Team lead</p>
       <p>
         Process, fulfill, and track customer orders using ERP system Microsoft
         dynamics 365
@@ -20,13 +20,13 @@ export const ExperienceAndCource = () => {
       </p>
 
       <p>Preparing reports and work instructions for processes</p>
-      <h3>Cources</h3>
+      <h3>Courses</h3>
 
       <p>2024 - 2025</p>
 
       <h4 style={{ textDecoration: "underline" }}>Hamburg Coding School</h4>
       <p>Full-stack web development</p>
-      <ul>
+      <ul style={{ paddingLeft: "20px", paddingTop: "10px" }}>
         <li>HTML5</li>
         <li>CSS3</li>
         <li>Javascript</li>
@@ -37,7 +37,14 @@ export const ExperienceAndCource = () => {
         <li>MySQL</li>
         <li>Bootstrap</li>
       </ul>
-      <h3>React projects</h3>
+      <h3>project with HTML, CSS, JS and Bootstrap</h3>
+      <a
+        href="https://rahel-teferi.github.io/hcs-project/html/index.html"
+        target="_blank"
+      >
+        <h5>Amazing Animals: Learn and Quiz!</h5>
+      </a>
+      <h3>React practice projects</h3>
       <NavLink to="digitalClock">
         <h5>Digital Clock</h5>
       </NavLink>

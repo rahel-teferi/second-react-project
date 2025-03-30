@@ -11,20 +11,13 @@ export const ShoppingList = () => {
     setInputValue(e.target.value);
   }
   function addToTheList(e) {
-    // e.preventDefault();
-    // const form = e.target;
-    // const formData = new FormData(form);
-    // const formJson = Object.fromEntries(formData.entries());
-    // console.log(formData);
-    // setItem([...item, Object.values(formJson)]);
-    // const newItem = e.target.value;
-
-    // console.log(newItem);
     if (inputValue.trim() !== "") {
       setItem((item) => [...item, inputValue]);
       setInputValue((i) => (i = ""));
+
       // form.reset();
     }
+    console.log(item);
   }
   function moveDown(index) {
     if (index < item.length - 1) {
@@ -57,26 +50,25 @@ export const ShoppingList = () => {
     e.preventDefault();
     navigate("/");
   }
-  const styleForList = {
-    paddingLeft: "50px",
-    width: "100%",
-    padding: "20px 40px",
-    textAlign: "left",
-    maxHeight: "100px",
-    overflowY: "scroll",
-  };
+  // const styleForList = {
+  //   paddingLeft: "0 50px",
+  //   width: "100%",
+  //   padding: "20px 40px",
+  //   textAlign: "left",
+  //   maxHeight: "70vh",
+  //   overflowY: "scroll",
+  // };
   const navigate = useNavigate();
   return (
     <>
       <section
         style={{
-          maxWidth: "500px",
-          backgroundColor: "lightgrey",
-          margin: "50px auto",
+          maxWidth: "1000px",
+          margin: "auto",
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
-          padding: "0 30px",
+          height: "75vh",
         }}
       >
         <h1 style={{ margin: "20px" }}>Shopping list</h1>
@@ -88,8 +80,25 @@ export const ShoppingList = () => {
             placeholder="Add new item"
             value={inputValue}
             onChange={changeInputValue}
+            style={{
+              width: "50%",
+              padding: "5px",
+              border: "2px solid grey",
+              borderRadius: "5px",
+              marginBottom: "50px",
+            }}
           />
-          <button type="button" onClick={addToTheList}>
+          <button
+            style={{
+              margin: "10px",
+              padding: "5px 20px",
+              backgroundColor: "lightBlue",
+              borderRadius: "8px",
+              border: "2px solid grey",
+            }}
+            type="button"
+            onClick={addToTheList}
+          >
             Add
           </button>
         </form>
@@ -98,19 +107,14 @@ export const ShoppingList = () => {
           onDeleteItem={deleteItem}
           onMoveUp={moveUp}
           onMoveDown={moveDown}
-          sl={styleForList}
+          // sl={styleForList}
         />
       </section>
-      <section>
+      <section style={{ margin: "20px 10px" }}>
         <p>
           Go back to <Link to="/">Home</Link>
         </p>
-        {/* <p>
-          Return to
-          <a href="#" onClick={() => navigate("/")}>
-            Home Page
-          </a>
-        </p> */}
+
         <p>
           Go back to
           <a href="#" onClick={() => navigate(-1)}>

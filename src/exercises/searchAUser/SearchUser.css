@@ -6,7 +6,7 @@
 
 .searchContainer {
     margin-top: 50px;
-    /* overflow-x: hidden; */
+    height: 500vh
 }
 
 .searchSection {

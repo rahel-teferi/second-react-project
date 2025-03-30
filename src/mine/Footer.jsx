@@ -12,12 +12,13 @@ export const Footer = () => {
         display: "flex",
         flexDirection: "column",
         margin: "auto",
-        // width: "100vw",
         textAlign: "center",
         backgroundColor: "black",
         color: "white",
-        position: "relative",
+        position: "fixed",
         bottom: 0,
+        width: "100%",
+        // height: "10vh",
       }}
     >
       <ul

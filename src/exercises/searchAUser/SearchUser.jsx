@@ -11,8 +11,24 @@ export const SearchUser = ({ data, value, onChange, onClick }) => {
             placeholder="Please enter user name"
             value={value}
             onChange={onChange}
+            style={{
+              padding: "5px",
+              border: "2px solid grey",
+              borderRadius: "5px",
+            }}
           />
-          <input type="button" value="Search" onClick={onClick} />
+          <input
+            type="button"
+            value="Search"
+            onClick={onClick}
+            style={{
+              margin: "10px",
+              padding: "5px",
+              backgroundColor: "white",
+              borderRadius: "8px",
+              border: "2px solid grey",
+            }}
+          />
         </form>
       </section>
       <section className="result">

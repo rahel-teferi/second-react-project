@@ -1,19 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
-
+import "../quoteGenerator/QuoteGenerator.css";
 export const QuoteGenerator = ({ data, fetchNewQuote }) => {
   const navigate = useNavigate();
   return (
-    <div style={{ width: "100%", height: "93vh" }}>
+    <div style={{ width: "100%" }}>
       <h1 style={{ padding: "50px", textAlign: "center" }}>
         Random quote Generator
       </h1>
       <div
         style={{
-          maxWidth: "500px",
-          height: "200px",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "lightgrey",
+          // backgroundColor: "lightgrey",
           margin: "auto",
           textAlign: "center",
           alignItems: "center",
@@ -21,12 +19,23 @@ export const QuoteGenerator = ({ data, fetchNewQuote }) => {
           gap: "50px",
         }}
       >
-        <button type="button" onClick={fetchNewQuote}>
+        <button
+          type="button"
+          onClick={fetchNewQuote}
+          style={{
+            padding: "5px",
+
+            borderRadius: "8px",
+            border: "2px solid grey",
+          }}
+        >
           Load more
         </button>
-        <p>{data.quote ? data.quote : ""}</p>
+        <blockquote>"{data.quote ? data.quote : ""}"</blockquote>
       </div>
-      <section style={{ margin: "100px 20px" }}>
+      <section
+      // style={{ margin: "100px 20px" }}
+      >
         <p>
           Go back to <Link to="/">Home</Link>
         </p>
